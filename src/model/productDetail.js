@@ -6,7 +6,7 @@ const productDetailSchema = new mongoose.Schema({
         ref: "Product",
     },
     size: {
-        type: Number,
+        type: String,
         require: true,
     },
     quantity: {
