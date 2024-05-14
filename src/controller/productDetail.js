@@ -34,6 +34,22 @@ export const getAllProductDetailAllProduct = async (req, res) => {
         });
     }
 }
+// export const getProductDetailByIdProduct = async (req, res) => {
+//     try {
+//         const { product_id } = req.params;
+//         const productDetail = await ProductDetail.findById(product_id);
+//         if (!productDetail) {
+//             return res.status(404).json({
+//                 message: "Không tìm thấy sản phẩm nào hợp lệ"
+//             });
+//         }
+//         return res.json({ productDetail });
+//     } catch (error) {
+//         return res.status(400).json({
+//             message: error.message
+//         });
+//     }
+// }
 
 export const getProductDetailByIdProduct = async (req, res) => {
     try {
