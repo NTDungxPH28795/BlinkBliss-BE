@@ -72,7 +72,12 @@ export const addToCart = async (req, res) => {
         );
       }
     }
-
+    // if (!check) {
+    //   const newCartDetail = new CartDetail({
+    //     cart_id: cart._id,
+    //     productDetailId: findProductDetail._id,
+    //     quantity: quantity,
+      });
     if (!check) {
       const newCartDetail = new CartDetail({
         cart_id: cart._id,
