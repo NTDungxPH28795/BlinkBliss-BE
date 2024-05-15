@@ -37,9 +37,8 @@ export const tokenUser = async (req, res) => {
 export const addToCart = async (req, res) => {
   try {
     const { productDetailId, user_id } = req.params;
-    const { quantity } = req.body;
+    const { quantity , deIDproduct } = req.body;
     const cart = await Cart.findOne({ user_id: user_id });
-    // console.log(quantity);
 
     if (!cart) {
       return res.status(400).json({
@@ -48,7 +47,10 @@ export const addToCart = async (req, res) => {
     }
 
     const cartDetails = await CartDetail.find({ cart_id: cart._id });
-    const findProductDetail = await ProductDetail.findById(productDetailId);
+    const findProductDetail = await ProductDetail.findById(deIDproduct);
+
+    console.log(findProductDetail);
+
     if (!findProductDetail) {
       return res.status(400).json({
         message: "Sản Phẩm Chi Tiết Không Tồn Tại"
@@ -72,12 +74,7 @@ export const addToCart = async (req, res) => {
         );
       }
     }
-    // if (!check) {
-    //   const newCartDetail = new CartDetail({
-    //     cart_id: cart._id,
-    //     productDetailId: findProductDetail._id,
-    //     quantity: quantity,
-      });
+
     if (!check) {
       const newCartDetail = new CartDetail({
         cart_id: cart._id,

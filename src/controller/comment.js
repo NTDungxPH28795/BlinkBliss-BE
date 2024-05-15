@@ -18,20 +18,7 @@ export const getAllComment = async (req, res) => {
     });
   }
 };
-// export const getComment = async (req, res) => {
-//   try {
-//     const comment = await Comment.findById(req.params.id);
-//     if (!comment) {
-//       return res.status(404).json({
-//       });
-//     }
-//     return res.json(comment);
-//   } catch (error) {
-//     return res.status(400).json({
-//       message: error.message,
-//     });
-//   }
-// };
+
 export const getComment = async (req, res) => {
   try {
     const comment = await Comment.findById(req.params.id);

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-// import monggodbird
+
 const cartSchema = new mongoose.Schema({
     user_id: { type: String, required: true },
     products: [{

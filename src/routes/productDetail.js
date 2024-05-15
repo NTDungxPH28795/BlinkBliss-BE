@@ -4,7 +4,7 @@ import { checkPermission } from '../middleware/checkPermission';
 
 const productDetailRouter = express.Router();
 
-productDetailRouter.post('/productdetail/add', checkPermission, createProductDetail);
+productDetailRouter.post('/productdetail/add', createProductDetail);
 productDetailRouter.get('/productdetail/:product_id', getAllProductDetailAllProduct);
 productDetailRouter.get('/productdetail', getAllProductDetail);
 productDetailRouter.get('/productdetail/:product_id/detail', getProductDetailByIdProduct);

@@ -13,9 +13,9 @@ const productDetailSchema = new mongoose.Schema({
         type: Number,
         require: true,
     },
-    color: {
-        type: String,
-        required: true
+    price_var: {
+        type: Number,
+        require: true,
     },
 },
     {
