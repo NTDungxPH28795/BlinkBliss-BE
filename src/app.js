@@ -15,7 +15,6 @@ import productDetailRouter from "./routes/productDetail";
 import paymentRouter from "./routes/payment";
 import checkoutRouter from "./routes/checkout";
 
-
 const app = express();
 
 app.use(express.json());
@@ -36,16 +35,10 @@ app.use("/api", cartRouter)
 app.use("/api", paymentRouter)
 app.use("/api", checkoutRouter)
 
-
 mongoose.connect("mongodb+srv://laxus:IxnIvFuEVLsMlBhv@cluster0.yfuqvhg.mongodb.net/test", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
-
-// mongoose.connect("mongodb://127.0.0.1:27017/DATN", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// });
 
 // Sự kiện khi kết nối thành công
 mongoose.connection.on("connected", () => {
@@ -61,6 +54,5 @@ mongoose.connection.on("error", (err) => {
 mongoose.connection.on("disconnected", () => {
     console.log("Ngắt kết nối đến MongoDB");
 });
-
 
 export const viteNodeApp = app;
