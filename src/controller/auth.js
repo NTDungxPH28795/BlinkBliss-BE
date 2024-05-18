@@ -108,30 +108,3 @@ export const signIn = async (req, res) => {
         });
     }
 };
-
-// export const Profile = async (req, res) => {
-    
-//     const token = req.headers.authorization; 
-    
-//     const secretKey = 'your_secret_key_here';
-
-//     try {
-//         if (!token) {
-//             return res.status(401).json({ message: 'Không có token được cung cấp.' });
-//         }
-
-//         const decoded = jwt.verify(token, secretKey);
-
-//         const userInfo = {
-//             _id: decoded._id,
-            
-//         };
-
-//         res.status(200).json(userInfo);
-//     } catch (error) {
-//         console.error('Lỗi giải mã token:', error.message);
-//         res.status(401).json({ message: 'Token không hợp lệ.' });
-//     }
-// };
-
-
