@@ -11,8 +11,6 @@ cartRouter.get('/cart/:userID', getCart);
 cartRouter.get('/cart/cart-detail', getCartDetail);
 
 // Hiện thị chi tiết sản phẩm trong giỏ hàng
-// cartRouter.get('/cart/:user_id', getCart);
-// cartDetail
 cartRouter.get('/cartDetail/:id', getCartDetail)
 cartRouter.delete('/cartDetail/:id', removeCartDetail)
 cartRouter.put('/cartDetail/:id/update', updateCart)
