@@ -15,7 +15,6 @@ import moment from 'moment';
 import querystring from 'qs';
 import crypto from 'crypto';
 
-// import config from 'config';
 //Them vao don hang
 checkoutRouter.post('/checkout/add', createCheckout);
 
