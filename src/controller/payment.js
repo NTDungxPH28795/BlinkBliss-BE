@@ -18,8 +18,6 @@ export const getPayment = async (req, res) => {
     }
 }
 
-
-
 export const getOnePayment = async (req, res) => {
     try {
         const payment = await Payment.findById(req.params.id);
@@ -35,7 +33,6 @@ export const getOnePayment = async (req, res) => {
         });
     }
 }
-
 
 export const createPayment = async (req, res) => {
     try {
